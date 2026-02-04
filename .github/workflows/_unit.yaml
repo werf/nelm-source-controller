@@ -1,7 +1,0 @@
-name: unit
-on: [pull_request]
-jobs:
-  _:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Stub check passed instantly"
