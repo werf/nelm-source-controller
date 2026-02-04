@@ -1,0 +1,9 @@
+name: lint
+
+on: [pull_request, push]
+
+jobs:
+  _:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Stub check passed instantly"
