@@ -28,8 +28,8 @@
       "docsURLTemplate": "https://pkg.go.dev/github.com/fluxcd/pkg/apis/acl#{{ .TypeIdentifier }}"
     },
     {
-      "typeMatchPrefix": "^github.com/fluxcd/source-controller/api/v1",
-      "docsURLTemplate": "https://pkg.go.dev/github.com/fluxcd/source-controller/api/v1#{{ .TypeIdentifier }}"
+      "typeMatchPrefix": "^github.com/werf/nelm-source-controller/api/v1",
+      "docsURLTemplate": "https://pkg.go.dev/github.com/werf/nelm-source-controller/api/v1#{{ .TypeIdentifier }}"
     }
   ],
   "typeDisplayNamePrefixOverrides": {

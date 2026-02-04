@@ -101,12 +101,12 @@ uninstall: manifests  ## Uninstall CRDs from a cluster
 	kustomize build config/crd | kubectl delete -f -
 
 deploy: manifests  ## Deploy controller in the configured Kubernetes cluster in ~/.kube/config
-	cd config/manager && kustomize edit set image fluxcd/source-controller=$(IMG):$(TAG)
+	cd config/manager && kustomize edit set image werf/nelm-source-controller=$(IMG):$(TAG)
 	kustomize build config/default | kubectl apply -f -
 
 dev-deploy:  ## Deploy controller dev image in the configured Kubernetes cluster in ~/.kube/config
 	mkdir -p config/dev && cp config/default/* config/dev
-	cd config/dev && kustomize edit set image fluxcd/source-controller=$(IMG):$(TAG)
+	cd config/dev && kustomize edit set image werf/nelm-source-controller=$(IMG):$(TAG)
 	kustomize build config/dev | kubectl apply -f -
 	rm -rf config/dev
 
@@ -201,7 +201,7 @@ fuzz-build:
 	docker build . --tag local-fuzzing:latest -f tests/fuzz/Dockerfile.builder
 	docker run --rm \
 		-e FUZZING_LANGUAGE=go -e SANITIZER=address \
-		-e CIFUZZ_DEBUG='True' -e OSS_FUZZ_PROJECT_NAME=fluxcd \
+		-e CIFUZZ_DEBUG='True' -e OSS_FUZZ_PROJECT_NAME=nelm \
 		-v "$(shell pwd)/build/fuzz/out":/out \
 		local-fuzzing:latest
 

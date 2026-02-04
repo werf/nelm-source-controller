@@ -348,7 +348,7 @@ are set up with the same interval. For more information, please refer to the
 `.spec.url` is a required field that depending on the [type of the HelmRepository object](#type)
 specifies the HTTP/S or OCI address of a Helm repository.
 
-For OCI, the URL is expected to point to a registry repository, e.g. `oci://ghcr.io/fluxcd/source-controller`.
+For OCI, the URL is expected to point to a registry repository, e.g. `oci://registry.werf.io/nelm/source-controller`.
 
 For Helm repositories which require authentication, see [Secret reference](#secret-reference).
 

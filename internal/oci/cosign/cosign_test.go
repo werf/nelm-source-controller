@@ -142,7 +142,7 @@ func TestPrivateKeyVerificationWithProxy(t *testing.T) {
 
 	registryAddr := testregistry.New(t)
 
-	tagURL := fmt.Sprintf("%s/fluxcd/source-controller:v1.3.0", registryAddr)
+	tagURL := fmt.Sprintf("%s/nelm/source-controller:v1.3.0", registryAddr)
 	ref, err := name.ParseReference(tagURL)
 	g.Expect(err).NotTo(HaveOccurred())
 

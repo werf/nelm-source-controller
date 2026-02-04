@@ -6,7 +6,7 @@ RUN wget https://go.dev/dl/go1.24.0.linux-amd64.tar.gz \
     && tar -C temp-go/ -xzf go1.24.0.linux-amd64.tar.gz \
     && mv temp-go/go/* /root/.go/
 
-ENV SRC=$GOPATH/src/github.com/fluxcd/source-controller
+ENV SRC=$GOPATH/src/github.com/werf/nelm-source-controller
 ENV FLUX_CI=true
 
 COPY ./ $SRC
