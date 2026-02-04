@@ -72,7 +72,7 @@ control over.
 2. Run `kubectl get buckets` to see the Bucket:
 
    ```console
-   NAME           ENDPOINT            AGE   READY   STATUS                                                                                         
+   NAME           ENDPOINT            AGE   READY   STATUS
    minio-bucket   minio.example.com   34s   True    stored artifact for revision 'sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
    ```
 
@@ -113,7 +113,7 @@ control over.
 ## Writing a Bucket spec
 
 As with all other Kubernetes config, a Bucket needs `apiVersion`, `kind`, and
-`metadata` fields. The name of a Bucket object must be a valid 
+`metadata` fields. The name of a Bucket object must be a valid
 [DNS subdomain name](https://kubernetes.io/docs/concepts/overview/working-with-objects/names#dns-subdomain-names).
 
 A Bucket also needs a
@@ -291,10 +291,10 @@ is assumed to be publicly reachable.
 When a reference is specified, it expects a Secret with one of the following
 sets of `.data` fields:
 
-- `tenantId`, `clientId` and `clientSecret` for authenticating a Service 
+- `tenantId`, `clientId` and `clientSecret` for authenticating a Service
    Principal with a secret.
 - `tenantId`, `clientId` and `clientCertificate` (plus optionally
-  `clientCertificatePassword` and/or `clientCertificateSendChain`) for 
+  `clientCertificatePassword` and/or `clientCertificateSendChain`) for
    authenticating a Service Principal with a certificate.
 - `clientId` for authenticating using a Managed Identity.
 - `accountKey` for authenticating using a
@@ -963,7 +963,7 @@ of files in the Bucket.
 
 **Note:** The server-side filtering works only with the `generic`, `aws`
 and `gcp` [provider](#provider) and is preferred over [`.spec.ignore`](#ignore)
-as a more efficient way of excluding files. 
+as a more efficient way of excluding files.
 
 ### Ignore
 
@@ -1030,7 +1030,7 @@ spec:
 
 To manually tell the source-controller to reconcile a Bucket outside the
 [specified interval window](#interval), a Bucket can be annotated with
-`reconcile.fluxcd.io/requestedAt: <arbitrary value>`. Annotating the resource
+`reconcile.werf.io/requestedAt: <arbitrary value>`. Annotating the resource
 queues the Bucket for reconciliation if the `<arbitrary-value>` differs from
 the last value the controller acted on, as reported in
 [`.status.lastHandledReconcileAt`](#last-handled-reconcile-at).
@@ -1038,7 +1038,7 @@ the last value the controller acted on, as reported in
 Using `kubectl`:
 
 ```sh
-kubectl annotate --field-manager=flux-client-side-apply --overwrite  bucket/<bucket-name> reconcile.fluxcd.io/requestedAt="$(date +%s)"
+kubectl annotate --field-manager=flux-client-side-apply --overwrite  bucket/<bucket-name> reconcile.werf.io/requestedAt="$(date +%s)"
 ```
 
 Using `flux`:
@@ -1309,7 +1309,7 @@ the Artifact in the storage no longer exists.
 #### Failed Bucket
 
 The source-controller may get stuck trying to produce an Artifact for a Bucket
-without completing. This can occur due to some of the following factors: 
+without completing. This can occur due to some of the following factors:
 
 - The object storage [Endpoint](#endpoint) is temporarily unavailable.
 - The specified object storage bucket does not exist.
@@ -1372,7 +1372,7 @@ intervention.
 
 ### Last Handled Reconcile At
 
-The source-controller reports the last `reconcile.fluxcd.io/requestedAt`
+The source-controller reports the last `reconcile.werf.io/requestedAt`
 annotation value it acted on in the `.status.lastHandledReconcileAt` field.
 
 For practical information about this field, see [triggering a

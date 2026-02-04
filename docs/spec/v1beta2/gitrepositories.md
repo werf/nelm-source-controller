@@ -50,7 +50,7 @@ You can run this example by saving the manifest into `gitrepository.yaml`.
 2. Run `kubectl get gitrepository` to see the GitRepository:
 
    ```console
-   NAME      URL                                       AGE   READY   STATUS                                                                        
+   NAME      URL                                       AGE   READY   STATUS
    podinfo   https://github.com/stefanprodan/podinfo   5s    True    stored artifact for revision 'master@sha1:132f4e719209eb10b9485302f8593fc0e680f4fc'
    ```
 
@@ -333,7 +333,7 @@ metadata:
 spec:
   ref:
     commit: "<commit SHA>"
-``` 
+```
 
 This field takes precedence over all other fields. It can be combined with
 `.spec.ref.branch` to perform a shallow clone of the branch, in which the
@@ -349,7 +349,7 @@ spec:
   ref:
     branch: <branch>
     commit: "<commit SHA within branch>"
-``` 
+```
 
 ### Verification
 
@@ -553,7 +553,7 @@ spec:
 
 To manually tell the source-controller to reconcile a GitRepository outside the
 [specified interval window](#interval), a GitRepository can be annotated with
-`reconcile.fluxcd.io/requestedAt: <arbitrary value>`. Annotating the resource
+`reconcile.werf.io/requestedAt: <arbitrary value>`. Annotating the resource
 queues the GitRepository for reconciliation if the `<arbitrary-value>` differs
 from the last value the controller acted on, as reported in
 [`.status.lastHandledReconcileAt`](#last-handled-reconcile-at).
@@ -561,7 +561,7 @@ from the last value the controller acted on, as reported in
 Using `kubectl`:
 
 ```sh
-kubectl annotate --field-manager=flux-client-side-apply --overwrite gitrepository/<repository-name> reconcile.fluxcd.io/requestedAt="$(date +%s)"
+kubectl annotate --field-manager=flux-client-side-apply --overwrite gitrepository/<repository-name> reconcile.werf.io/requestedAt="$(date +%s)"
 ```
 
 Using `flux`:
@@ -971,7 +971,7 @@ intervention.
 
 ### Last Handled Reconcile At
 
-The source-controller reports the last `reconcile.fluxcd.io/requestedAt`
+The source-controller reports the last `reconcile.werf.io/requestedAt`
 annotation value it acted on in the `.status.lastHandledReconcileAt` field.
 
 For practical information about this field, see [triggering a

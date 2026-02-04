@@ -36,7 +36,7 @@ Valid time units are `s`, `m` and `h` e.g. `interval: 5m`.
 The controller can be told to check for updates right away by setting an annotation on source objects:
 
 ```bash
-kubectl annotate --overwrite gitrepository/podinfo fluxcd.io/reconcileAt="$(date +%s)"
+kubectl annotate --overwrite gitrepository/podinfo werf.io/reconcileAt="$(date +%s)"
 ```
 
 The source objects reconciliation can be suspended by setting `spec.suspend` to `true`.

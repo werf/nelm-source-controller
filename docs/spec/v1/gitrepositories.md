@@ -50,7 +50,7 @@ You can run this example by saving the manifest into `gitrepository.yaml`.
 2. Run `kubectl get gitrepository` to see the GitRepository:
 
    ```console
-   NAME      URL                                       AGE   READY   STATUS                                                                        
+   NAME      URL                                       AGE   READY   STATUS
    podinfo   https://github.com/stefanprodan/podinfo   5s    True    stored artifact for revision 'master@sha1:132f4e719209eb10b9485302f8593fc0e680f4fc'
    ```
 
@@ -162,7 +162,7 @@ data:
 
 To provide a Certificate Authority to trust while connecting with a Git
 repository over HTTPS, the referenced Secret's `.data` can contain a `ca.crt`
-or `caFile` key. `ca.crt` takes precedence over `caFile`, i.e. if both keys 
+or `caFile` key. `ca.crt` takes precedence over `caFile`, i.e. if both keys
 are present, the value of `ca.crt` will be taken into consideration.
 
 ```yaml
@@ -249,7 +249,7 @@ Supported options are:
 - `github`
 
 When provider is not specified, it defaults to `generic` indicating that
-mechanisms using `spec.secretRef` are used for authentication. 
+mechanisms using `spec.secretRef` are used for authentication.
 
 For a complete guide on how to set up authentication for cloud providers,
 see the integration [docs](/flux/integrations/).
@@ -257,7 +257,7 @@ see the integration [docs](/flux/integrations/).
 #### Azure
 
 The `azure` provider can be used to authenticate to Azure DevOps repositories
-automatically using Workload Identity. 
+automatically using Workload Identity.
 
 ##### Pre-requisites
 
@@ -335,7 +335,7 @@ The `github` provider can be used to authenticate to Git repositories using
 - [Register](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app)
   the GitHub App with the necessary permissions and [generate a private
   key](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/managing-private-keys-for-github-apps)
-  for the app. 
+  for the app.
 
 - [Install](https://docs.github.com/en/apps/using-github-apps/installing-your-own-github-app)
   the app in the organization/account configuring access to the necessary
@@ -347,7 +347,7 @@ The GitHub App information is specified in `.spec.secretRef` in the format
 specified below:
 
 - Get the App ID from the app settings page at
-  `https://github.com/settings/apps/<app-name>`. 
+  `https://github.com/settings/apps/<app-name>`.
 - Get the App Installation ID from the app installations page at
 `https://github.com/settings/installations`. Click the installed app, the URL
 will contain the installation ID
@@ -360,7 +360,7 @@ same pattern.
 - (Optional) If GitHub Enterprise Server uses a private CA, include its bundle (root and any intermediates) in `ca.crt`.
   If the `ca.crt` is specified, then it will be used for TLS verification for all API / Git over `HTTPS` requests to the GitHub Enterprise Server.
 
-**NOTE:** If the secret contains `tls.crt`, `tls.key` then [mutual TLS configuration](#https-mutual-tls-authentication) will be automatically enabled. 
+**NOTE:** If the secret contains `tls.crt`, `tls.key` then [mutual TLS configuration](#https-mutual-tls-authentication) will be automatically enabled.
 Omit these keys if the GitHub server does not support mutual TLS.
 
 ```yaml
@@ -390,7 +390,7 @@ the github app authentication information.
 flux create secret githubapp ghapp-secret \
     --app-id=1 \
     --app-installation-id=3 \
-    --app-private-key=~/private-key.pem    
+    --app-private-key=~/private-key.pem
 ```
 
 ### Service Account reference
@@ -543,7 +543,7 @@ metadata:
 spec:
   ref:
     commit: "<commit SHA>"
-``` 
+```
 
 This field takes precedence over all other fields. It can be combined with
 `.spec.ref.branch` to perform a shallow clone of the branch, in which the
@@ -559,7 +559,7 @@ spec:
   ref:
     branch: <branch>
     commit: "<commit SHA within branch>"
-``` 
+```
 
 ### Verification
 
@@ -815,7 +815,7 @@ spec:
 
 To manually tell the source-controller to reconcile a GitRepository outside the
 [specified interval window](#interval), a GitRepository can be annotated with
-`reconcile.fluxcd.io/requestedAt: <arbitrary value>`. Annotating the resource
+`reconcile.werf.io/requestedAt: <arbitrary value>`. Annotating the resource
 queues the GitRepository for reconciliation if the `<arbitrary-value>` differs
 from the last value the controller acted on, as reported in
 [`.status.lastHandledReconcileAt`](#last-handled-reconcile-at).
@@ -823,7 +823,7 @@ from the last value the controller acted on, as reported in
 Using `kubectl`:
 
 ```sh
-kubectl annotate --field-manager=flux-client-side-apply --overwrite gitrepository/<repository-name> reconcile.fluxcd.io/requestedAt="$(date +%s)"
+kubectl annotate --field-manager=flux-client-side-apply --overwrite gitrepository/<repository-name> reconcile.werf.io/requestedAt="$(date +%s)"
 ```
 
 Using `flux`:
@@ -1249,7 +1249,7 @@ intervention.
 
 ### Last Handled Reconcile At
 
-The source-controller reports the last `reconcile.fluxcd.io/requestedAt`
+The source-controller reports the last `reconcile.werf.io/requestedAt`
 annotation value it acted on in the `.status.lastHandledReconcileAt` field.
 
 For practical information about this field, see [triggering a

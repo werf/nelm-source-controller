@@ -4,7 +4,7 @@
 
 There are 2 [Helm repository types](#type) defined by the `HelmRepository` API:
 - Helm HTTP/S repository, which defines a Source to produce an Artifact for a Helm
-repository index YAML (`index.yaml`). 
+repository index YAML (`index.yaml`).
 - OCI Helm repository, which defines a source that does not produce an Artifact.
   It's a data container to store the information about the OCI repository that
   can be used by [HelmChart](helmcharts.md) to access OCI Helm charts.
@@ -39,7 +39,7 @@ In the above example:
 - The digest (algorithm defaults to SHA256) of the Helm repository index after
   stable sorting the entries is used as Artifact revision, reported in-cluster
   in the `.status.artifact.revision` field.
-- When the current HelmRepository revision differs from the latest fetched 
+- When the current HelmRepository revision differs from the latest fetched
   revision, it is stored as a new Artifact.
 - The new Artifact is reported in the `.status.artifact` field.
 
@@ -54,7 +54,7 @@ You can run this example by saving the manifest into `helmrepository.yaml`.
 2. Run `kubectl get helmrepository` to see the HelmRepository:
 
    ```console
-   NAME      URL                                      AGE   READY   STATUS                                                                                         
+   NAME      URL                                      AGE   READY   STATUS
    podinfo   https://stefanprodan.github.io/podinfo   4s    True    stored artifact for revision 'sha256:83a3c595163a6ff0333e0154c790383b5be441b9db632cb36da11db1c4ece111'
    ```
 
@@ -149,7 +149,7 @@ A HelmRepository also needs a
 
 ### Type
 
-`.spec.type` is an optional field that specifies the Helm repository type. 
+`.spec.type` is an optional field that specifies the Helm repository type.
 
 Possible values are `default` for a Helm HTTP/S repository, or `oci` for an OCI Helm repository.
 
@@ -217,7 +217,7 @@ by extension gain access to ACR.
 
 ##### Kubelet Managed Identity
 
-When the kubelet managed identity has access to ACR, source-controller running on 
+When the kubelet managed identity has access to ACR, source-controller running on
 it will also have access to ACR.
 
 **Note:** If you have more than one identity configured on the cluster, you have to specify which one to use
@@ -557,12 +557,12 @@ For practical information, see
 **Note:** This section does not apply to [OCI Helm
 Repositories](#helm-oci-repository), being a data container, once created, they
 are ready to used by [HelmCharts](helmcharts.md).
- 
+
 ### Triggering a reconcile
 
 To manually tell the source-controller to reconcile a HelmRepository outside the
 [specified interval window](#interval), a HelmRepository can be annotated with
-`reconcile.fluxcd.io/requestedAt: <arbitrary value>`. Annotating the resource
+`reconcile.werf.io/requestedAt: <arbitrary value>`. Annotating the resource
 queues the object for reconciliation if the `<arbitrary-value>` differs from
 the last value the controller acted on, as reported in
 [`.status.lastHandledReconcileAt`](#last-handled-reconcile-at).
@@ -570,7 +570,7 @@ the last value the controller acted on, as reported in
 Using `kubectl`:
 
 ```sh
-kubectl annotate --field-manager=flux-client-side-apply --overwrite helmrepository/<repository-name> reconcile.fluxcd.io/requestedAt="$(date +%s)"
+kubectl annotate --field-manager=flux-client-side-apply --overwrite helmrepository/<repository-name> reconcile.werf.io/requestedAt="$(date +%s)"
 ```
 
 Using `flux`:
@@ -903,7 +903,7 @@ or stalled due to error it can not recover from without human intervention.
 
 ### Last Handled Reconcile At
 
-The source-controller reports the last `reconcile.fluxcd.io/requestedAt`
+The source-controller reports the last `reconcile.werf.io/requestedAt`
 annotation value it acted on in the `.status.lastHandledReconcileAt` field.
 
 For practical information about this field, see [triggering a

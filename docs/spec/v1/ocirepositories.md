@@ -50,7 +50,7 @@ You can run this example by saving the manifest into `ocirepository.yaml`.
 2. Run `kubectl get ocirepository` to see the OCIRepository:
 
    ```console
-   NAME      URL                                            AGE   READY   STATUS                                                                        
+   NAME      URL                                            AGE   READY   STATUS
    podinfo   oci://ghcr.io/stefanprodan/manifests/podinfo   5s    True    stored artifact with revision 'latest@sha256:3b6cdcc7adcc9a84d3214ee1c029543789d90b5ae69debe9efa3f66e982875de'
    ```
 
@@ -744,7 +744,7 @@ placed in the artifact root or in subdirectories.
 
 To manually tell the source-controller to reconcile a OCIRepository outside the
 [specified interval window](#interval), an OCIRepository can be annotated with
-`reconcile.fluxcd.io/requestedAt: <arbitrary value>`. Annotating the resource
+`reconcile.werf.io/requestedAt: <arbitrary value>`. Annotating the resource
 queues the OCIRepository for reconciliation if the `<arbitrary-value>` differs
 from the last value the controller acted on, as reported in
 [`.status.lastHandledReconcileAt`](#last-handled-reconcile-at).
@@ -752,7 +752,7 @@ from the last value the controller acted on, as reported in
 Using `kubectl`:
 
 ```sh
-kubectl annotate --field-manager=flux-client-side-apply --overwrite ocirepository/<repository-name> reconcile.fluxcd.io/requestedAt="$(date +%s)"
+kubectl annotate --field-manager=flux-client-side-apply --overwrite ocirepository/<repository-name> reconcile.werf.io/requestedAt="$(date +%s)"
 ```
 
 Using `flux`:
@@ -1133,7 +1133,7 @@ intervention.
 
 ### Last Handled Reconcile At
 
-The source-controller reports the last `reconcile.fluxcd.io/requestedAt`
+The source-controller reports the last `reconcile.werf.io/requestedAt`
 annotation value it acted on in the `.status.lastHandledReconcileAt` field.
 
 For practical information about this field, see [triggering a

@@ -46,7 +46,7 @@ In the above example:
 You can run this example by saving the manifest into `helmchart.yaml`.
 
 **Note:** HelmChart is usually used by the helm-controller. Based on the
-HelmRelease configuration, an associated HelmChart is created by the 
+HelmRelease configuration, an associated HelmChart is created by the
 helm-controller.
 
 1. Apply the resource on the cluster:
@@ -58,7 +58,7 @@ helm-controller.
 2. Run `kubectl get helmchart` to see the HelmChart:
 
    ```console
-   NAME      CHART     VERSION   SOURCE KIND      SOURCE NAME   AGE   READY   STATUS                                     
+   NAME      CHART     VERSION   SOURCE KIND      SOURCE NAME   AGE   READY   STATUS
    podinfo   podinfo   5.*       HelmRepository   podinfo       53s   True    pulled 'podinfo' chart with version '5.2.1'
    ```
 
@@ -100,7 +100,7 @@ helm-controller.
 ## Writing a HelmChart spec
 
 As with all other Kubernetes config, a HelmChart needs `apiVersion`, `kind`, and
-`metadata` fields. The name of a HelmChart object must be a valid 
+`metadata` fields. The name of a HelmChart object must be a valid
 [DNS subdomain name](https://kubernetes.io/docs/concepts/overview/working-with-objects/names#dns-subdomain-names).
 
 A HelmChart also needs a
@@ -432,7 +432,7 @@ This allows for older artifacts to be valid as long as the right certificate is 
 
 To manually tell the source-controller to reconcile a HelmChart outside the
 [specified interval window](#interval), a HelmCHart can be annotated with
-`reconcile.fluxcd.io/requestedAt: <arbitrary value>`. Annotating the resource
+`reconcile.werf.io/requestedAt: <arbitrary value>`. Annotating the resource
 queues the object for reconciliation if the `<arbitrary-value>` differs from
 the last value the controller acted on, as reported in
 [`.status.lastHandledReconcileAt`](#last-handled-reconcile-at).
@@ -440,7 +440,7 @@ the last value the controller acted on, as reported in
 Using `kubectl`:
 
 ```sh
-kubectl annotate --field-manager=flux-client-side-apply --overwrite helmchart/<chart-name> reconcile.fluxcd.io/requestedAt="$(date +%s)"
+kubectl annotate --field-manager=flux-client-side-apply --overwrite helmchart/<chart-name> reconcile.werf.io/requestedAt="$(date +%s)"
 ```
 
 ### Waiting for `Ready`
@@ -590,9 +590,9 @@ The following flags are provided to enable and configure the cache:
   If `0`, then the cache is disabled.
 - `helm-cache-ttl`: The TTL of an index in the cache.
 - `helm-cache-purge-interval`: The interval at which the cache is purged of
-  expired items. 
+  expired items.
 
-The caching strategy is to pull a repository index from the cache if it is 
+The caching strategy is to pull a repository index from the cache if it is
 available, otherwise to load the index, retrieve and build the chart,
 then cache the index. The cached index TTL is refreshed every time the
 Helm repository index is loaded with the `helm-cache-ttl` value.
@@ -855,7 +855,7 @@ intervention.
 
 ### Last Handled Reconcile At
 
-The source-controller reports the last `reconcile.fluxcd.io/requestedAt`
+The source-controller reports the last `reconcile.werf.io/requestedAt`
 annotation value it acted on in the `.status.lastHandledReconcileAt` field.
 
 For practical information about this field, see [triggering a
