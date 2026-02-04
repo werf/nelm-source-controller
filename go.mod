@@ -2,6 +2,8 @@ module github.com/werf/nelm-source-controller
 
 go 1.25.0
 
+replace github.com/werf/nelm-source-controller/api => ./api
+
 // Replace digest lib to master to gather access to BLAKE3.
 // xref: https://github.com/opencontainers/go-digest/pull/66
 replace github.com/opencontainers/go-digest => github.com/opencontainers/go-digest v1.0.1-0.20220411205349-bde1400a84be

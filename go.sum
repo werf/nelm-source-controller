@@ -1018,8 +1018,6 @@ github.com/vektah/gqlparser/v2 v2.5.26 h1:REqqFkO8+SOEgZHR/eHScjjVjGS8Nk3RMO/jui
 github.com/vektah/gqlparser/v2 v2.5.26/go.mod h1:D1/VCZtV3LPnQrcPBeR/q5jkSQIPti0uYCP/RI0gIeo=
 github.com/veraison/go-cose v1.3.0 h1:2/H5w8kdSpQJyVtIhx8gmwPJ2uSz1PkyWFx0idbd7rk=
 github.com/veraison/go-cose v1.3.0/go.mod h1:df09OV91aHoQWLmy1KsDdYiagtXgyAwAl8vFeFn1gMc=
-github.com/werf/nelm-source-controller/api v1.7.1-0.20260204053128-45fcc4e9b3a1 h1:G2ppjq3ndlKPB0Y53/vwqLyGDiElZMGl5K0+svnTBpE=
-github.com/werf/nelm-source-controller/api v1.7.1-0.20260204053128-45fcc4e9b3a1/go.mod h1:Ewa/hye6pMWFTD6ICGFWha6pQejf1dc7+oCpK4vMV6I=
 github.com/x448/float16 v0.8.4 h1:qLwI1I70+NjRFUR3zs1JPUCgaCXSh3SW62uAKT1mSBM=
 github.com/x448/float16 v0.8.4/go.mod h1:14CWIYCyZA/cWjXOioeEpHeN/83MdbZDRQHoFcYsOfg=
 github.com/xanzy/ssh-agent v0.3.3 h1:+/15pJfg/RsTxqYcX6fHqOXZwwMP+2VyYWJeWM2qQFM=
