@@ -1,5 +1,5 @@
 # Image URL to use all building/pushing image targets
-IMG ?= fluxcd/source-controller
+IMG ?= registry.werf.io/nelm/source-controller
 TAG ?= latest
 
 # Allows for defining additional Go test args, e.g. '-tags integration'.
@@ -214,7 +214,7 @@ fuzz-smoketest: fuzz-build
 		bash -c "/runner.sh"
 
 # Run fuzz tests for the duration set in FUZZ_TIME.
-fuzz-native: 
+fuzz-native:
 	KUBEBUILDER_ASSETS=$(KUBEBUILDER_ASSETS) \
 	FUZZ_TIME=$(FUZZ_TIME) \
 		./tests/fuzz/native_go_run.sh
