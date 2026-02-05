@@ -31,10 +31,10 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	fakeclient "sigs.k8s.io/controller-runtime/pkg/client/fake"
 
-	"github.com/fluxcd/pkg/apis/meta"
-	"github.com/fluxcd/pkg/runtime/conditions"
-	conditionscheck "github.com/fluxcd/pkg/runtime/conditions/check"
-	"github.com/fluxcd/pkg/runtime/patch"
+	"github.com/werf/3p-fluxcd-pkg/apis/meta"
+	"github.com/werf/3p-fluxcd-pkg/runtime/conditions"
+	conditionscheck "github.com/werf/3p-fluxcd-pkg/runtime/conditions/check"
+	"github.com/werf/3p-fluxcd-pkg/runtime/patch"
 
 	sourcev1 "github.com/werf/nelm-source-controller/api/v1"
 	serror "github.com/werf/nelm-source-controller/internal/error"

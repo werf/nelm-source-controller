@@ -38,9 +38,9 @@ import (
 	"helm.sh/helm/v3/pkg/repo"
 	"sigs.k8s.io/yaml"
 
-	"github.com/fluxcd/pkg/version"
+	"github.com/werf/3p-fluxcd-pkg/version"
 
-	"github.com/fluxcd/pkg/http/transport"
+	"github.com/werf/3p-fluxcd-pkg/http/transport"
 	"github.com/werf/nelm-source-controller/internal/helm"
 	"github.com/werf/nelm-source-controller/internal/oci"
 )

@@ -22,8 +22,8 @@ import (
 
 	"github.com/google/go-containerregistry/pkg/authn"
 
-	"github.com/fluxcd/pkg/auth"
-	authutils "github.com/fluxcd/pkg/auth/utils"
+	"github.com/werf/3p-fluxcd-pkg/auth"
+	authutils "github.com/werf/3p-fluxcd-pkg/auth/utils"
 
 	sourcev1 "github.com/werf/nelm-source-controller/api/v1"
 )

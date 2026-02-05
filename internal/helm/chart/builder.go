@@ -24,7 +24,7 @@ import (
 	"regexp"
 	"strings"
 
-	sourcefs "github.com/fluxcd/pkg/oci"
+	sourcefs "github.com/werf/3p-fluxcd-pkg/oci"
 	helmchart "helm.sh/helm/v3/pkg/chart"
 	"helm.sh/helm/v3/pkg/chartutil"
 

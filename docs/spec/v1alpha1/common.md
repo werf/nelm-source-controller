@@ -76,17 +76,17 @@ type Artifact struct {
 > **Note:** to be replaced with <https://github.com/kubernetes/enhancements/pull/1624>
 > once made available.
 
-Source objects should implement the [`meta.Condition`](https://godoc.org/github.com/fluxcd/pkg/apis/meta#Condition).
+Source objects should implement the [`meta.Condition`](https://godoc.org/github.com/werf/3p-fluxcd-pkg/apis/meta#Condition).
 
 #### Types
 
-Source objects should implement the [`meta.ReadyCondition`](https://godoc.org/github.com/fluxcd/pkg/apis/meta#pkg-constants),
+Source objects should implement the [`meta.ReadyCondition`](https://godoc.org/github.com/werf/3p-fluxcd-pkg/apis/meta#pkg-constants),
 but may implement additional domain-specific types.
 
 #### Reasons
 
 Source objects may implement the [`meta` condition
-reasons](https://godoc.org/github.com/fluxcd/pkg/apis/meta#pkg-constants), but
+reasons](https://godoc.org/github.com/werf/3p-fluxcd-pkg/apis/meta#pkg-constants), but
 are allowed to use their own reasons if they provide a better explanation.
 
 In addition, the following source specific reasons are available:

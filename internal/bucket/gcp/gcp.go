@@ -35,8 +35,8 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	"github.com/fluxcd/pkg/auth"
-	gcpauth "github.com/fluxcd/pkg/auth/gcp"
+	"github.com/werf/3p-fluxcd-pkg/auth"
+	gcpauth "github.com/werf/3p-fluxcd-pkg/auth/gcp"
 
 	sourcev1 "github.com/werf/nelm-source-controller/api/v1"
 )

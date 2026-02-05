@@ -30,8 +30,8 @@ import (
 	"helm.sh/helm/v3/pkg/repo"
 	"sigs.k8s.io/yaml"
 
-	sourcefs "github.com/fluxcd/pkg/oci"
-	"github.com/fluxcd/pkg/runtime/transform"
+	sourcefs "github.com/werf/3p-fluxcd-pkg/oci"
+	"github.com/werf/3p-fluxcd-pkg/runtime/transform"
 
 	"github.com/werf/nelm-source-controller/internal/helm/chart/secureloader"
 	"github.com/werf/nelm-source-controller/internal/helm/repository"

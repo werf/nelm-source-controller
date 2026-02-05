@@ -23,9 +23,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/fluxcd/pkg/apis/meta"
 	"github.com/google/go-containerregistry/pkg/name"
 	. "github.com/onsi/gomega"
+	"github.com/werf/3p-fluxcd-pkg/apis/meta"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	fakeclient "sigs.k8s.io/controller-runtime/pkg/client/fake"

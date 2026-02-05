@@ -36,8 +36,8 @@ import (
 	"github.com/Masterminds/semver/v3"
 	"github.com/google/go-containerregistry/pkg/name"
 
-	"github.com/fluxcd/pkg/http/transport"
-	"github.com/fluxcd/pkg/version"
+	"github.com/werf/3p-fluxcd-pkg/http/transport"
+	"github.com/werf/3p-fluxcd-pkg/version"
 	"github.com/werf/nelm-source-controller/internal/oci"
 )
 

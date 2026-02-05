@@ -378,7 +378,7 @@ The `HelmRepository` API has been promoted from `v1beta2` to `v1` (GA).
 The `v1` API is backwards compatible with `v1beta2`.
 
 For `HelmRepository` of type `oci`, the `.spec.insecure` field allows connecting
-over HTTP to an insecure non-TLS container registry. 
+over HTTP to an insecure non-TLS container registry.
 
 To upgrade from `v1beta2`, after deploying the new CRD and controller,
 set  `apiVersion: source.werf.io/v1` in the YAML files that
@@ -407,7 +407,7 @@ of OCI artifacts.
 
 A new optional field `.spec.ref.semverFilter` has been added,
 which allows the controller to filter the tags based on regular expressions
-before applying the semver range. This allows 
+before applying the semver range. This allows
 [picking the latest release candidate](https://github.com/fluxcd/source-controller/blob/release/v1.3.x/docs/spec/v1beta2/ocirepositories.md#semverfilter-example)
 instead of the latest stable release.
 
@@ -442,7 +442,7 @@ Fixes:
 
 **Release date:** 2024-04-04
 
-This patch release comes with improvements to the `HelmChart` name validation 
+This patch release comes with improvements to the `HelmChart` name validation
 and adds logging sanitization of connection error messages for `Bucket` sources.
 
 Fixes:
@@ -643,7 +643,7 @@ Fixes:
   [#1222](https://github.com/fluxcd/source-controller/pull/1222)
 - helmrepo: fix Secret type check for TLS via `.spec.secretRef`
   [#1225](https://github.com/fluxcd/source-controller/pull/1225)
-- Upgrade github.com/fluxcd/pkg/{git,git/gogit}
+- Upgrade github.com/werf/3p-fluxcd-pkg/{git,git/gogit}
   [#1236](https://github.com/fluxcd/source-controller/pull/1236)
 
 Improvements:
@@ -1055,7 +1055,7 @@ the HEAD of a branch (`refs/heads/main`) to a tag (`refs/tags/v0.1.0`) by
 changing a single field value.
 
 Refer to the [GitRepository specification](https://github.com/fluxcd/source-controller/blob/v0.35.0/docs/spec/v1beta2/gitrepositories.md#name-example)
-for more details. 
+for more details.
 
 #### Introduction of Artifact Digest
 
@@ -1447,7 +1447,7 @@ Improvements:
 **Release date:** 2022-08-17
 
 This prerelease adds support for SAS Keys when authenticating against Azure Blob Storage
-and improves the documentation for `OCIRepository`. 
+and improves the documentation for `OCIRepository`.
 
 The package `sourceignore`, which is used for excluding files from Flux internal artifacts,
 has been moved to `fluxcd/pkg/sourceignore`.
@@ -1466,7 +1466,7 @@ Improvements:
 
 **Release date:** 2022-08-11
 
-This prerelease comes with panic recovery, to protect the controller from crashing 
+This prerelease comes with panic recovery, to protect the controller from crashing
 when reconciliations lead to a crash. It also adds OCI documentation and improvements
 to the controllers CI pipeline.
 
@@ -1649,7 +1649,7 @@ Improvements:
 **Release date:** 2022-06-07
 
 This prerelease fixes a regression when accessing Gitlab via HTTPS
-when the URL does not have the '.git' suffix. Plus some small 
+when the URL does not have the '.git' suffix. Plus some small
 documentation fixes and dependency updates.
 
 Fixes:
@@ -1888,7 +1888,7 @@ Improvements:
 
 This prerelease introduces new retention options for Garbage Collection,
 a new opt-in in-memory cache for `HelmRepository` index files, improves
-notifications following reconciling failures, brings ways to configure 
+notifications following reconciling failures, brings ways to configure
 Key Exchange Algorithms, plus some extra housekeeping awesomeness.
 
 Garbage Collection is enabled by default, and now its retention options
@@ -1896,7 +1896,7 @@ are configurable with the flags: `--artifact-retention-ttl` (default: `60s`)
 and `--artifact-retention-records` (default: `2`). They define the minimum
 time to live and the maximum amount of artifacts to survive a collection.
 
-A new notification is now emitted to identify recovery from failures. It 
+A new notification is now emitted to identify recovery from failures. It
 is triggered when a failed reconciliation is followed by a successful one, and
 the notification message is the same that's sent in usual successful source
 reconciliation message about the stored artifact.
@@ -1913,12 +1913,12 @@ to the `go-git` gitImplementation or the `libgit2` gitImplementation but
 _only_ when Managed Transport is being used.
 
 Managed Transport for `libgit2` now introduces self-healing capabilities,
-to recover from failure when long-running connections become stale. 
+to recover from failure when long-running connections become stale.
 
 The exponental back-off retry can be configured with the new flags:
 `--min-retry-delay` (default: `750ms`) and `--max-retry-delay`
 (default: `15min`). Previously the defaults were set to `5ms` and `1000s`,
-which in some cases impaired the controller's ability to self-heal 
+which in some cases impaired the controller's ability to self-heal
 (e.g. retrying failing SSH connections).
 
 
@@ -2041,7 +2041,7 @@ Definitions on your cluster and/or in Git.
   no longer be downloaded on every reconcile if none of them have changed.
 - `HelmChart` resources do now advertise the observed chart name
   (`.status.observedChartName`) and Source (reference) Artifact revision
-  (`.status.observedSourceArtifactRevision`) in the Status. The information is 
+  (`.status.observedSourceArtifactRevision`) in the Status. The information is
   used to more efficiently react to source revision and/or chart changes.
 
 ### Features and Improvements
@@ -2309,7 +2309,7 @@ Improvements:
 This prerelease comes with an update to the Kubernetes and controller-runtime dependencies
 to align them with the Kubernetes 1.23 release, including an update of Helm to `v3.7.2`.
 
-In addition, the controller is now built with Go 1.17, and 
+In addition, the controller is now built with Go 1.17, and
 `github.com/containerd/containerd` was updated to `v1.5.8` to please
 static security analysers and fix any warnings for GHSA-5j5w-g665-5m35.
 
@@ -2387,15 +2387,15 @@ with as goal to be more efficient, and increase code and testing quality.
 It contains **breaking behavioral changes** to `HelmRepository` and
 `HelmChart` resources:
 
-- Helm repository index files and/or charts **must** not exceed the new declared 
+- Helm repository index files and/or charts **must** not exceed the new declared
   runtime default limits to [avoid out-of-memory crashes](https://github.com/fluxcd/source-controller/issues/470),
   overwriting the default configuration is possible.
 
-  | Type | Default max size **(in MiB)** | Option flag to overwrite |
-  |---|---|---|
-  | Helm repository index | 50MiB | `--helm-index-max-size=<bytes>` |
-  | Helm chart | 10MiB | `--helm-chart-max-size=<bytes>` |
-  | Singe file from Helm chart | 5MiB | `--helm-chart-file-max-size=<bytes>` |
+  | Type                       | Default max size **(in MiB)** | Option flag to overwrite             |
+  | -------------------------- | ----------------------------- | ------------------------------------ |
+  | Helm repository index      | 50MiB                         | `--helm-index-max-size=<bytes>`      |
+  | Helm chart                 | 10MiB                         | `--helm-chart-max-size=<bytes>`      |
+  | Singe file from Helm chart | 5MiB                          | `--helm-chart-file-max-size=<bytes>` |
 
 - Using `ValuesFiles` in a `HelmChart` will now append a `.<Generation>` to the SemVer
   metadata of the packaged chart and the revision of the Artifact. For example,
@@ -2994,7 +2994,7 @@ ARMv7 image to fail due to `libgit2` requiring `musl>=1.2.0`.
 
 This prerelease fixes a regression bug causing the commit hash for the
 `go-git` implementation to not be forwarded, introduced by the support
-for multiple Git implementations. 
+for multiple Git implementations.
 
 ## 0.5.2
 
@@ -3214,7 +3214,7 @@ This prerelease comes with a bug fix to the Git semver checkout.
 
 **Release date:** 2020-08-17
 
-This prerelease upgrades the `github.com/fluxcd/pkg/*` dependencies
+This prerelease upgrades the `github.com/werf/3p-fluxcd-pkg/*` dependencies
 to dedicated versioned modules.
 
 ## 0.0.8
@@ -3229,7 +3229,7 @@ and it's possible to configure the timeout of index downloads.
 
 **Release date:** 2020-07-31
 
-This prerelease comes with a breaking change, the 
+This prerelease comes with a breaking change, the
 CRDs group has been renamed to `source.werf.io`.
 
 ## 0.0.6
@@ -3309,7 +3309,7 @@ This alpha release contains several bug fixes
 [#47](https://github.com/fluxcd/source-controller/pull/47)
 [#49](https://github.com/fluxcd/source-controller/pull/49)
 [#50](https://github.com/fluxcd/source-controller/pull/50).
-After a successful synchronization, the controller reports the revision in the 
+After a successful synchronization, the controller reports the revision in the
 status ready condition.
 
 ## 0.0.1-alpha.4
@@ -3341,7 +3341,7 @@ operations per reconciler using the newly introduced `--concurrent` flag
 
 Liveness and readiness probes have been added to the deployment manifest, and
 the security has been strengthened by running the controller as a non-root user
-by default and adding a container security context. 
+by default and adding a container security context.
 
 Tests have been added to ensure correct behaviour of the `HelmChartReconciler`
 and `HelmRepositoryReconciler`.
@@ -3354,4 +3354,4 @@ This is the first alpha release of source controller.
 The controller is an implementation of the
 [source.fluxcd.io/v1alpha1](https://github.com/fluxcd/source-controller/tree/v0.0.1-alpha.1/docs/spec/v1alpha1) API
 based on the specifications described in the
-[Source Controller Proposal](https://github.com/fluxcd/source-controller/tree/v0.0.1-alpha.1/docs/spec). 
+[Source Controller Proposal](https://github.com/fluxcd/source-controller/tree/v0.0.1-alpha.1/docs/spec).

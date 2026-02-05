@@ -30,8 +30,8 @@ import (
 	"github.com/minio/minio-go/v7/pkg/s3utils"
 	corev1 "k8s.io/api/core/v1"
 
-	"github.com/fluxcd/pkg/auth"
-	awsauth "github.com/fluxcd/pkg/auth/aws"
+	"github.com/werf/3p-fluxcd-pkg/auth"
+	awsauth "github.com/werf/3p-fluxcd-pkg/auth/aws"
 
 	sourcev1 "github.com/werf/nelm-source-controller/api/v1"
 )

@@ -17,7 +17,7 @@ limitations under the License.
 package v1
 
 import (
-	"github.com/fluxcd/pkg/apis/meta"
+	"github.com/werf/3p-fluxcd-pkg/apis/meta"
 )
 
 // OCIRepositoryVerification verifies the authenticity of an OCI Artifact

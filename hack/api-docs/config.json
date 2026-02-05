@@ -20,12 +20,12 @@
       "docsURLTemplate": "https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.19/#{{lower .TypeIdentifier}}-{{arrIndex .PackageSegments -1}}-{{arrIndex .PackageSegments -2}}"
     },
     {
-      "typeMatchPrefix": "^github.com/fluxcd/pkg/apis/meta",
-      "docsURLTemplate": "https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#{{ .TypeIdentifier }}"
+      "typeMatchPrefix": "^github.com/werf/3p-fluxcd-pkg/apis/meta",
+      "docsURLTemplate": "https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#{{ .TypeIdentifier }}"
     },
     {
-      "typeMatchPrefix": "^github.com/fluxcd/pkg/apis/acl",
-      "docsURLTemplate": "https://pkg.go.dev/github.com/fluxcd/pkg/apis/acl#{{ .TypeIdentifier }}"
+      "typeMatchPrefix": "^github.com/werf/3p-fluxcd-pkg/apis/acl",
+      "docsURLTemplate": "https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/acl#{{ .TypeIdentifier }}"
     },
     {
       "typeMatchPrefix": "^github.com/werf/nelm-source-controller/api/v1",
@@ -35,7 +35,7 @@
   "typeDisplayNamePrefixOverrides": {
     "k8s.io/api/": "Kubernetes ",
     "k8s.io/apimachinery/pkg/apis/": "Kubernetes ",
-    "github.com/fluxcd/pkg/apis/meta/": "Meta "
+    "github.com/werf/3p-fluxcd-pkg/apis/meta/": "Meta "
   },
   "markdownDisabled": false
 }

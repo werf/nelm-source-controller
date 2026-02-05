@@ -34,7 +34,7 @@ import (
 	. "github.com/onsi/gomega"
 	"github.com/sirupsen/logrus"
 
-	"github.com/fluxcd/pkg/oci"
+	"github.com/werf/3p-fluxcd-pkg/oci"
 
 	testlistener "github.com/werf/nelm-source-controller/tests/listener"
 )

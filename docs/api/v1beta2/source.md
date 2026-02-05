@@ -169,8 +169,8 @@ string
 <td>
 <code>secretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -184,8 +184,8 @@ for the Bucket.</p>
 <td>
 <code>certSecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -210,8 +210,8 @@ be of type <code>Opaque</code> or <code>kubernetes.io/tls</code>.</p>
 <td>
 <code>proxySecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -281,8 +281,8 @@ Bucket.</p>
 <td>
 <code>accessFrom</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/acl#AccessFrom">
-github.com/fluxcd/pkg/apis/acl.AccessFrom
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/acl#AccessFrom">
+github.com/werf/3p-fluxcd-pkg/apis/acl.AccessFrom
 </a>
 </em>
 </td>
@@ -384,8 +384,8 @@ string
 <td>
 <code>secretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -529,8 +529,8 @@ should be included in the Artifact produced for this GitRepository.</p>
 <td>
 <code>accessFrom</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/acl#AccessFrom">
-github.com/fluxcd/pkg/apis/acl.AccessFrom
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/acl#AccessFrom">
+github.com/werf/3p-fluxcd-pkg/apis/acl.AccessFrom
 </a>
 </em>
 </td>
@@ -746,8 +746,8 @@ source.</p>
 <td>
 <code>accessFrom</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/acl#AccessFrom">
-github.com/fluxcd/pkg/apis/acl.AccessFrom
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/acl#AccessFrom">
+github.com/werf/3p-fluxcd-pkg/apis/acl.AccessFrom
 </a>
 </em>
 </td>
@@ -868,8 +868,8 @@ host.</p>
 <td>
 <code>secretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -887,8 +887,8 @@ keys is deprecated. Please use <code>.spec.certSecretRef</code> instead.</p>
 <td>
 <code>certSecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -990,8 +990,8 @@ HelmRepository.</p>
 <td>
 <code>accessFrom</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/acl#AccessFrom">
-github.com/fluxcd/pkg/apis/acl.AccessFrom
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/acl#AccessFrom">
+github.com/werf/3p-fluxcd-pkg/apis/acl.AccessFrom
 </a>
 </em>
 </td>
@@ -1164,8 +1164,8 @@ When not specified, defaults to &lsquo;generic&rsquo;.</p>
 <td>
 <code>secretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -1210,8 +1210,8 @@ the image pull if the service account has attached pull secrets. For more inform
 <td>
 <code>certSecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -1237,8 +1237,8 @@ been deprecated.</p>
 <td>
 <code>proxySecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -1501,8 +1501,8 @@ where temporary credentials will be fetched.</p>
 <td>
 <code>secretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -1517,8 +1517,8 @@ and <code>password</code> and is supported only for the <code>ldap</code> provid
 <td>
 <code>certSecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -1654,8 +1654,8 @@ string
 <td>
 <code>secretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -1669,8 +1669,8 @@ for the Bucket.</p>
 <td>
 <code>certSecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -1695,8 +1695,8 @@ be of type <code>Opaque</code> or <code>kubernetes.io/tls</code>.</p>
 <td>
 <code>proxySecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -1766,8 +1766,8 @@ Bucket.</p>
 <td>
 <code>accessFrom</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/acl#AccessFrom">
-github.com/fluxcd/pkg/apis/acl.AccessFrom
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/acl#AccessFrom">
+github.com/werf/3p-fluxcd-pkg/apis/acl.AccessFrom
 </a>
 </em>
 </td>
@@ -1870,8 +1870,8 @@ the source artifact.</p>
 <td>
 <code>ReconcileRequestStatus</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#ReconcileRequestStatus">
-github.com/fluxcd/pkg/apis/meta.ReconcileRequestStatus
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#ReconcileRequestStatus">
+github.com/werf/3p-fluxcd-pkg/apis/meta.ReconcileRequestStatus
 </a>
 </em>
 </td>
@@ -1889,7 +1889,7 @@ github.com/fluxcd/pkg/apis/meta.ReconcileRequestStatus
 </h3>
 <p>
 (<em>Appears on:</em>
-<a href="#source.werf.io/v1beta2.GitRepositorySpec">GitRepositorySpec</a>, 
+<a href="#source.werf.io/v1beta2.GitRepositorySpec">GitRepositorySpec</a>,
 <a href="#source.werf.io/v1beta2.GitRepositoryStatus">GitRepositoryStatus</a>)
 </p>
 <p>GitRepositoryInclude specifies a local reference to a GitRepository which
@@ -1908,8 +1908,8 @@ Artifact (sub-)contents must be included, and where they should be placed.</p>
 <td>
 <code>repository</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -2066,8 +2066,8 @@ string
 <td>
 <code>secretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -2211,8 +2211,8 @@ should be included in the Artifact produced for this GitRepository.</p>
 <td>
 <code>accessFrom</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/acl#AccessFrom">
-github.com/fluxcd/pkg/apis/acl.AccessFrom
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/acl#AccessFrom">
+github.com/werf/3p-fluxcd-pkg/apis/acl.AccessFrom
 </a>
 </em>
 </td>
@@ -2381,8 +2381,8 @@ to produce the current Artifact.</p>
 <td>
 <code>ReconcileRequestStatus</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#ReconcileRequestStatus">
-github.com/fluxcd/pkg/apis/meta.ReconcileRequestStatus
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#ReconcileRequestStatus">
+github.com/werf/3p-fluxcd-pkg/apis/meta.ReconcileRequestStatus
 </a>
 </em>
 </td>
@@ -2429,8 +2429,8 @@ string
 <td>
 <code>secretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -2589,8 +2589,8 @@ source.</p>
 <td>
 <code>accessFrom</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/acl#AccessFrom">
-github.com/fluxcd/pkg/apis/acl.AccessFrom
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/acl#AccessFrom">
+github.com/werf/3p-fluxcd-pkg/apis/acl.AccessFrom
 </a>
 </em>
 </td>
@@ -2739,8 +2739,8 @@ github.com/fluxcd/source-controller/api/v1.Artifact
 <td>
 <code>ReconcileRequestStatus</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#ReconcileRequestStatus">
-github.com/fluxcd/pkg/apis/meta.ReconcileRequestStatus
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#ReconcileRequestStatus">
+github.com/werf/3p-fluxcd-pkg/apis/meta.ReconcileRequestStatus
 </a>
 </em>
 </td>
@@ -2788,8 +2788,8 @@ host.</p>
 <td>
 <code>secretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -2807,8 +2807,8 @@ keys is deprecated. Please use <code>.spec.certSecretRef</code> instead.</p>
 <td>
 <code>certSecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -2910,8 +2910,8 @@ HelmRepository.</p>
 <td>
 <code>accessFrom</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/acl#AccessFrom">
-github.com/fluxcd/pkg/apis/acl.AccessFrom
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/acl#AccessFrom">
+github.com/werf/3p-fluxcd-pkg/apis/acl.AccessFrom
 </a>
 </em>
 </td>
@@ -3029,8 +3029,8 @@ github.com/fluxcd/source-controller/api/v1.Artifact
 <td>
 <code>ReconcileRequestStatus</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#ReconcileRequestStatus">
-github.com/fluxcd/pkg/apis/meta.ReconcileRequestStatus
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#ReconcileRequestStatus">
+github.com/werf/3p-fluxcd-pkg/apis/meta.ReconcileRequestStatus
 </a>
 </em>
 </td>
@@ -3105,7 +3105,7 @@ string
 </h3>
 <p>
 (<em>Appears on:</em>
-<a href="#source.werf.io/v1beta2.OCIRepositorySpec">OCIRepositorySpec</a>, 
+<a href="#source.werf.io/v1beta2.OCIRepositorySpec">OCIRepositorySpec</a>,
 <a href="#source.werf.io/v1beta2.OCIRepositoryStatus">OCIRepositoryStatus</a>)
 </p>
 <p>OCILayerSelector specifies which layer should be extracted from an OCI Artifact</p>
@@ -3299,8 +3299,8 @@ When not specified, defaults to &lsquo;generic&rsquo;.</p>
 <td>
 <code>secretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -3345,8 +3345,8 @@ the image pull if the service account has attached pull secrets. For more inform
 <td>
 <code>certSecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -3372,8 +3372,8 @@ been deprecated.</p>
 <td>
 <code>proxySecretRef</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#LocalObjectReference">
-github.com/fluxcd/pkg/apis/meta.LocalObjectReference
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#LocalObjectReference">
+github.com/werf/3p-fluxcd-pkg/apis/meta.LocalObjectReference
 </a>
 </em>
 </td>
@@ -3576,8 +3576,8 @@ the source artifact.</p>
 <td>
 <code>ReconcileRequestStatus</code><br>
 <em>
-<a href="https://pkg.go.dev/github.com/fluxcd/pkg/apis/meta#ReconcileRequestStatus">
-github.com/fluxcd/pkg/apis/meta.ReconcileRequestStatus
+<a href="https://pkg.go.dev/github.com/werf/3p-fluxcd-pkg/apis/meta#ReconcileRequestStatus">
+github.com/werf/3p-fluxcd-pkg/apis/meta.ReconcileRequestStatus
 </a>
 </em>
 </td>

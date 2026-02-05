@@ -20,8 +20,8 @@ limitations under the License.
 package features
 
 import (
-	"github.com/fluxcd/pkg/auth"
-	feathelper "github.com/fluxcd/pkg/runtime/features"
+	"github.com/werf/3p-fluxcd-pkg/auth"
+	feathelper "github.com/werf/3p-fluxcd-pkg/runtime/features"
 )
 
 const (

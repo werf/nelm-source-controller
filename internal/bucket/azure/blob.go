@@ -37,9 +37,9 @@ import (
 	corev1 "k8s.io/api/core/v1"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	"github.com/fluxcd/pkg/auth"
-	azureauth "github.com/fluxcd/pkg/auth/azure"
-	"github.com/fluxcd/pkg/masktoken"
+	"github.com/werf/3p-fluxcd-pkg/auth"
+	azureauth "github.com/werf/3p-fluxcd-pkg/auth/azure"
+	"github.com/werf/3p-fluxcd-pkg/masktoken"
 
 	sourcev1 "github.com/werf/nelm-source-controller/api/v1"
 )

@@ -31,7 +31,7 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/fluxcd/pkg/runtime/secrets"
+	"github.com/werf/3p-fluxcd-pkg/runtime/secrets"
 
 	sourcev1 "github.com/werf/nelm-source-controller/api/v1"
 	"github.com/werf/nelm-source-controller/internal/helm/registry"

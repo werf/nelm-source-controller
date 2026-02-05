@@ -25,7 +25,7 @@ import (
 	"k8s.io/client-go/tools/record"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/fluxcd/pkg/apis/meta"
+	"github.com/werf/3p-fluxcd-pkg/apis/meta"
 
 	sourcev1 "github.com/werf/nelm-source-controller/api/v1"
 	"github.com/werf/nelm-source-controller/internal/object"

@@ -26,7 +26,7 @@ import (
 	securejoin "github.com/cyphar/filepath-securejoin"
 	"sigs.k8s.io/yaml"
 
-	"github.com/fluxcd/pkg/runtime/transform"
+	"github.com/werf/3p-fluxcd-pkg/runtime/transform"
 
 	"github.com/werf/nelm-source-controller/internal/helm/chart/secureloader"
 )

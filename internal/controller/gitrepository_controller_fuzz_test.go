@@ -59,10 +59,10 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/envtest"
 	"sigs.k8s.io/controller-runtime/pkg/manager"
 
-	intstorage "github.com/fluxcd/pkg/artifact/digest"
-	"github.com/fluxcd/pkg/gittestserver"
-	"github.com/fluxcd/pkg/runtime/controller"
-	"github.com/fluxcd/pkg/runtime/testenv"
+	intstorage "github.com/werf/3p-fluxcd-pkg/artifact/digest"
+	"github.com/werf/3p-fluxcd-pkg/gittestserver"
+	"github.com/werf/3p-fluxcd-pkg/runtime/controller"
+	"github.com/werf/3p-fluxcd-pkg/runtime/testenv"
 
 	sourcev1 "github.com/werf/nelm-source-controller/api/v1"
 )

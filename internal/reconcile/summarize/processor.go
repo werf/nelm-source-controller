@@ -24,8 +24,8 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	eventv1 "github.com/fluxcd/pkg/apis/event/v1beta1"
-	"github.com/fluxcd/pkg/apis/meta"
+	eventv1 "github.com/werf/3p-fluxcd-pkg/apis/event/v1beta1"
+	"github.com/werf/3p-fluxcd-pkg/apis/meta"
 	serror "github.com/werf/nelm-source-controller/internal/error"
 	"github.com/werf/nelm-source-controller/internal/object"
 	"github.com/werf/nelm-source-controller/internal/reconcile"

@@ -3,8 +3,8 @@ module github.com/werf/nelm-source-controller/api
 go 1.25.0
 
 require (
-	github.com/fluxcd/pkg/apis/acl v0.9.0
-	github.com/fluxcd/pkg/apis/meta v1.23.0
+	github.com/werf/3p-fluxcd-pkg/apis/acl v0.9.0-nelm.1
+	github.com/werf/3p-fluxcd-pkg/apis/meta v1.23.0-nelm.1
 	k8s.io/apimachinery v0.34.2
 	sigs.k8s.io/controller-runtime v0.22.4
 )
