@@ -1,6 +1,6 @@
 module github.com/werf/nelm-source-controller/api
 
-go 1.25.0
+go 1.26.3
 
 require (
 	github.com/werf/3p-fluxcd-pkg/apis/acl v0.9.0-nelm.1
